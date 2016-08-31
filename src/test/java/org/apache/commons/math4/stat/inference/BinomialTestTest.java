@@ -42,6 +42,8 @@ public class BinomialTestTest {
             trials, successes, probability, AlternativeHypothesis.GREATER_THAN), 1E-4);
         Assert.assertEquals(0.982, testStatistic.binomialTest(
             trials, successes, probability, AlternativeHypothesis.LESS_THAN), 1E-4);
+        Assert.assertEquals(1, testStatistic.binomialTest(
+            200, 200, 0.9950429, AlternativeHypothesis.TWO_SIDED), 1E-4);
     }
 
     @Test

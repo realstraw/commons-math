@@ -147,6 +147,10 @@ public class BinomialTest {
                     criticalValueHigh--;
                 }
 
+                if (pTotal > 1) {
+                    return 1;
+                }
+
                 if (criticalValueLow > numberOfSuccesses || criticalValueHigh < numberOfSuccesses) {
                     break;
                 }
